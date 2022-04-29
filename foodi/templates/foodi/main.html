@@ -1,0 +1,1712 @@
+{% load static %}
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Project</title>
+<style>
+    button{ text-decoration: none; border: none; padding: 0%; margin: 0%;}
+    body { margin: 0px; background-color: rgba(237, 222, 222, 0.796);}
+
+    .top { background-color:grey; padding:1px;  display:flex;   position:fixed;  width: 100%;   height: 50px; z-index: 101;}
+
+    .top .left { margin-top:12px;   margin-left: 20px; } 
+
+    .top .right {  margin-top: 12px;  margin-left: 1260px;  float: right;  }
+
+    .top a:hover{  background-color:rgb(247, 241, 241);  padding: 3px;  }
+
+    .top a { text-decoration: none;   font-size: large;   padding: 5px;  }
+
+    .slider p { font-family: 'Courier New', Courier, monospace;  font-size: x-large;   letter-spacing: 2px;   text-transform: capitalize; color: antiquewhite;
+        position: absolute ;  top:420px;  left:630px;   font-weight: 700; }
+
+    .img img {  width: 75%; height: 400px;  margin-left: 12%;  margin-top: 75px;  }
+    
+   .recipes{ display: flex; flex-wrap: wrap;}
+   .recipe img { width: 318px; height: 300px; margin: 30px; border-radius: 10px;}
+   .recipe img:hover { transition: all 0.5s;  transform: scale(1.2);}
+
+   .modal{ display: none; position: fixed; z-index: 101;  left: 350px; top: 200px; width: 900px; height: 450px;
+    overflow: auto; background-color: rgba(250, 243, 243, 0.966);}
+
+    .modal-content{ color: black; margin: auto; padding: 5%; border: 1px solid #888; width: 80%;  }
+    .close{ color: #aaaaaa; float: right; font-size: 50px;  font-weight: bold;}
+    .close:hover { color: #000; text-decoration: none; cursor: pointer;}
+
+    .about{ background-color: aliceblue; text-align: center; }
+    .aboutss{font-size: large; margin-left: 8%; margin-right: 8%; letter-spacing: 2px; }
+    table{width: 100%; }
+    table tr td { padding: 10px; background-color: gray; margin: 10px;  text-align: center; border-radius: 10px; box-shadow: 8px 8px rgb(95, 91, 91); }
+
+</style>
+</head>
+<body>
+    <div class="top">
+       <div class="left">
+           <a href="">HOME</a> 
+       </div>
+       <div class="right">
+            <a href="#recipes">RECIPES</a> 
+            <a href="#about">ABOUT</a>
+       </div>
+    </div>
+    
+
+   <div class="slider">
+       <div class="img">
+           <a href=""><img src=" {% static 'diabetes.webp' %}" alt="not connected" ></a>
+           <p>FRUITS </p>
+       </div>
+       <div class="img" style="display: none;">
+        <a href=""><img src=" {% static 'food.jpg' %}" alt="not connected"></a>
+        <p>Eggs & Fish</p>
+       </div>
+      <div class="img" style="display: none;">
+        <a href=""><img src="{% static 'foood.jpg' %}" alt="not connected" ></a>
+        <p>Healthy food</p>
+      </div>
+      <div class="img" style="display: none;">
+        <a href=""><img src="{% static 'bp.png' %}" alt="not connected"></a>
+        <p> vegetable Meals   </p>
+      </div>
+   </div>
+   <br> 
+   <hr style="opacity:15% ;" >
+   <br>
+     <h1 id="recipes" style="margin-left: 50%; text-align: center; display: inline;">Recipes</h1>
+
+   <div class="recipes">
+       <div class="recipe">
+          <h2 style="text-align: center;"> BOWL RECIPE</h1>
+           <img src="{% static 'bowl recipes.webp' %}" alt="not connected" >
+           <div  class="modal"> 
+               <span class="close">&times;</span>
+               <h2>Bowl Recipe</h2>
+            <p><h3>(mix veg & omelette) </h3>
+           <h4>1. Wash and chop onions, tamatoes,cariander leaves & 
+               capsicum finely</h4>
+           <h4>2.mix together with salt and turmeic</h4>
+           <h4>Break the eggs to the bowl and 
+               check for shells</h4>
+           <h4>Beat the eggs until frothy</h4>
+           <h4>Add oil to a pen and heart it on a medium flame. 
+               Do not let the pan turn very hot, it will brown the 
+               omelette without cooking well</h4>
+            <h4>Pour the egg mixture, allow to cook untill set on a
+                 medium flame.</h4> 
+            <h4>When the base firms up, flip it to the other 
+                side and cook till done spring crushed pepper 
+                or chill powder if you like </h4>
+            <h4>And finally serve in Bowl </h4>      
+                </p>
+           </div>
+       </div>
+
+       <div class="recipe">
+         <h2 style="text-align: center;">SOYA RECIPE </h2>
+           <img src="{% static 'soyabean.webp' %}" alt="not connected">
+          <div  class="modal">
+            <span  class="close">&times;</span>
+            <p><h2>Best soya recipe </h2> <br><br>
+               <h3> Find here a list of best soya recipes</h3>  <br>
+               <h3> (vegetarian & non-vegetarian) like </h3><br>
+               <h3> Thai soyabean in cabbage cups, soya kebabs, </h3><br>
+                <h3> soya seekh, soya haleem, oat and soya pancakes <br>
+                 & many more </h3></p>
+
+          </div>
+       </div>
+
+       <div class="recipe">
+         <h2 style="text-align: center;">MIX ATTA </h2>
+           <img src="{% static 'mixatta.jpg' %}" alt="not connected">
+          <div  class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>Best meal for diabetes </h2><br>
+             <h3> preparation</h3>
+             <h3> For making 1 kilogram of best multigrain atta for diabetes, combine:</h3> <br>
+              <h3> 1. 400g of bajra flour,</h3> <br>
+              <h3> 2. 100g of barley flour, </h3><br>
+              <h3> 3. 150g of soy flour, </h3> <br>
+              <h3> 4. 150g of ragi flour, </h3> <br>
+              <h3> 5. 100g of rajgira flour, and. </h3><br>
+              <h3> 6. 100g chickpeas flour. </h3> <br>
+            </p>
+
+          </div>
+       </div>
+
+       <div class="recipe">
+         <h2 style="text-align: center;">OATSUPMA </h2>
+           <img src="{% static 'otsupma.jpeg'%}" alt="not connected">
+           <div  class="modal">
+            <span class="close">&times;</span>
+            <p><h2> Preparation</h2>
+              <h3> 1. 1 cup rolled oats; </h3><br>
+             <h3> 2. 1 tbsp oil;</h3>
+             <h3> 3. 1 tsp mustard;</h3><br>
+             <h3> 4. ½ tsp urad dal;</h3>
+             <h3> 5. ½ tsp jeera / cumin; </h3><br>
+             <h3> 6. few curry leaves;</h3>
+             <h3> 7. 10 cashew / kaju (whole); </h3> <br>
+             <h3> 8. 1 inch ginger (finely chopped);</h3>
+             <h3> 9. 2 chilli (slit);</h3>
+            <h3> 10. ½ onion (finely chopped);</h3><br>
+            <h3> 11. ½ carrot (finely chopped);</h3>
+            <h3> 12. 5 beans (finely chopped);</h3><br>
+            <h3> 13. ¼ capsicum (finely chopped); </h3>
+            <h3> 14. 2 tbsp peas / matar;  </h3><br>
+            <h3> 15. ½ tsp turmeric; </h3>
+            <h3> 16. ¾ tsp salt;</h3> <br>
+            <h3> 17. 1 cup water;</h3>
+            <h3> 18. 2 tbsp coriander (finely chopped);</h3>  <br>
+            <h3> 19. 2 tbsp coconut (grated); </h3><br>
+            <h3> 20. 1 tbsp lemon juice;</h3></p> 
+
+          </div>
+       </div>
+
+       <div class="recipe">
+         <h2 style="text-align: center;">DALCHEELA </h2>
+        <img src="{% static 'dalcheela.jpg'%}" alt="not connected">
+        <div class="modal">
+         <span class="close">&times;</span>
+         <p><h3> Ingredients of Moong Dal Chilla</h3>
+          <h4>1. ForMoong Dal Cheela </h4>
+         <h4>2. 2 cups split moong dal (without skin)</h4> 
+         <h4> 3. 1 green chilli,finely chopped (optional) </h4>
+         <h4> 4. 1/2 cup fresh coriander leaves,finely chopped</h4>
+         <h4> 5. Salt to taste</h4>
+         <h4> 6. 2 tbsp Olive oil/gheeFor</h4>
+         
+         <h3> ** Topping Option 1</h3>
+         <h4> 8. 100 gm mushrooms,sliced</h4>
+         <h4> 9. 1 tsp oil</h4>
+         <h4> 10. 100 gm paneer</h4>
+        <h4> 11. Salt to taste</h4>
+        <h4> 12. Freshly crushed black peppercorns</h4>
+        <h3> ** For Topping Option 2</h3>
+        <h4> 13. 200 gm tofu</h4>
+        <h4> 14. 1/2 cup onion, finely chopped</h4>
+        <h4> 15. 1 green chilli, finely chopped</h4>
+         <h4>16. Salt to taste1</h4>
+        <h4> 17. 1-2 pinch turmeric powder</h4>
+       <h4>  18. 1 tsp oil</h4>
+          </p>
+         </div>
+       </div>
+
+       <div class="recipe">
+         <h2 style="text-align: center;">PLAIN RAJMA </h2>
+        <img src="{% static 'rajma.jpg'%}" alt="not connected">
+            <div class="modal">
+         <span class="close">&times;</span>
+         <p> <h3> preaparation</h3>
+          <h4> pain Rajama Recipe</h4>
+          <h4>  1 . Sort dried beans and discard any misshapen or discolored beans. Rinse a couple of times, and then soak 1 cup rajma (kidney beans) in enough water to cover them.
+             Soaking should ideally last for 8 to 9 hours, so I usually soak them the night before I cook.</h4> 
+           <h3> 2 .Once the beans are well soaked, discard the soaking water. Drain and rinse the soaked beans a few times to remove any leftover grit, if any</h3>
+          <h3>  3 . Add the rinsed and drained kidney beans to a 3 litre pressure cooker.</h3>
+          <h3>  4 . Add the rinsed and drained kidney beans to a 3 litre pressure cooker.</h3>
+          <h3> 5 .While the kidney beans are cooking, chop 1 large onion (¾ to 1 cup finely chopped onion), 2 large tomatoes (1 cup finely chopped tomatoes) and make the crushed ginger+garlic+green chili paste.</h3>
+          <h3> 6 .When the pressure settles down on its own in the cooker, open the lid. Check if the rajma is cooked or not by eating or pressing a bean with your fingers. The cooked beans should not have a bite to them and softened.</h3>
+
+           <h2> The rajma beans should be completely cooked. If they are not cooked completely, then pressure cook again (adding some water if required) for a few more minutes.</h2>
+          <h3>   .Make masala base</h3>
+           <h4> 7. Heat either 3 tablespoons of butter (or 2 tablespoons butter + 1 tablespoon oil), in another pot or pan or kadai. Keep the heat to low or medium-low.</h4>
+           <h4> 8 .Add ½ teaspoon cumin seeds first and let them crackle and get browned.</h4>
+           <h4> 9 . Then add the finely chopped onions.</h4>
+          <h4> 10 .  Stir and begin to sauté them on medium-low to medium heat.</h4>
+          <h4> 11 .Keep on stirring the onions while sautéing them. This will ensure both uniform cooking and also that they don’t get burnt. Take care not to burn the onions, as this will impart bitter tones to the rajma curry.</h4>
+          <h4> 12 .Light browning of the onions is also fine</h4>
+
+          <h4> 13 .Sauté the onions till they are caramelized and golden brown.</h4>
+          <h4> 14 . Lower the heat and add the crushed ginger-garlic-chilli paste.</h4>
+          <h4> 15 . Stir and sauté for 5 to 10 seconds on a low heat or until the raw aroma of ginger-garlic goes away.</h4>
+          <h4> 16 . Add the finely chopped tomatoes.</h4>
+          <h4> 17 .Mix very well.</h4>
+          <h4> 18 .Sauté for 2 to 3 minutes until the tomatoes become soft on a medium-low to medium heat.</h4>
+          <h3> 19 . Add all the spice powders one by </h3>
+
+          <h4> ¼ teaspoon turmeric powder</h4>
+          <h4> ½ teaspoon red chilli powder (or cayenne pepper or paprika)</h4>
+          <h4> 1 teaspoon coriander powder</h4>
+          <h4> a pinch of asafoetida (hing)</h4>
+          <h4> ½ teaspoon garam masala powder.</h4>
+          
+          <h5><h3> NOTE:</h3> If you are gluten free, be sure to source certified gluten free asafoetida, as many commercial brands process the spice with wheat.</h5>
+
+          <h4> 20 .Mix again very well.</h4>
+          <h4> 21 . Continue to sauté the whole masala base until the fat starts leaving the sides of the masala on a medium-low heat. The onion tomato masala will thicken, become glossy and start clumping around itself.</h4>
+          <h4> 22 .Use a slotted spoon or a strainer, remove the rajma beans from their cooking liquid and add them to the masala.</h4>
+          <h4> 23 . Stir and sauté for a minute</h4>
+          <h4> 24 .Make Rajma Masala</h4>
+           <h3> Add 2 cups of the fresh water to the pan. If you like then you can also add the cooked rajma stock instead of fresh water.</h3>
+         <h4> 25 .Add salt as required.</h4>
+         <h4> 26 . Stir the whole rajma curry mixture.</h4>
+         <h4> 27 . On a low to medium-low heat, simmer without a lid for 10 to 12 minutes or more until the curry thickens slightly. The rajma curry should not be watery.</h4>
+         <h4> 28 .Mash a few rajma beans with the back of your spoon. This helps to thicken the rajma gravy.</h4>
+         <h4> 29 . Continue to simmer until you get a medium consistency in the cup.</h4>
+         <h4> 30 .Continue stirring at intervals when the rajma masala is simmering.</h4>
+         <h4> 31 . The Punjabi rajma masala has to thicken and the curry has to be of the right consistency, which is neither too thick nor thin.</h4>
+         <h4> 32 .Once the consistency is right, add 1 teaspoon crushed kasuri methi (dry fenugreek leaves) and 2 to 3 tablespoons light cream. (If using heavy whipping cream, then just add 1 tablespoon of it.) Mix very well and simmer for 30 seconds to 1 minute.</h4>
+
+         <h3> Adding cream is optional and you can easily skip it. Addition of cream gives some richness to the gravy making it taste restaurant style and balances the tang from the tomatoes.</h3>
+         <h4> 33 .Switch off the heat.</h4>
+         <h4> 34 .Serve your completed rajma masala with steamed basmati rice, jeera rice, saffron rice, Roti, paratha or naan. The combination of rajma and rice or rajma chawal is quite famous in North India.</h4>
+        </p> 
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">KALA-CHANA  </h2>
+         <img src="{% static 'kala chana.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2>preparation</h2>
+            <h3> Soak Black Chickpeas</h3>
+            <h4>1. Rinse 1 cup black chickpeas (kala chana) a couple of times in water. Then add 2.5 cups water and soak the kala chana overnight or for 8 to 9 hours.</h4>
+            
+            <h3>  After the black chickpeas have softened and become tender from the soaking, drain the extra water. Using a strainer, rinse the soaked chickpeas in water for a couple of times and set aside.</h3>
+         <h4>   2. In a 3 litre pressure cooker, add 2 tablespoons oil or ghee (clarified butter).</h4>
+            <h4>  3. When the oil becomes hot, lower the heat. Add 1 teaspoon cumin seeds (jeera). Let them crackle.</h4>
+            <h4>  4. Once the cumin seeds crackle, then add ½ cup finely chopped onions (about 1 medium-sized onion).</h4>
+            <h4> 5.  Sauté the onions stirring often until they become golden. Sauté onions on a medium-low to medium heat.</h4>
+            <h4>  6. Lower the heat again. Add 1 teaspoon finely chopped garlic, 1 teaspoon finely chopped ginger, and 1 teaspoon finely chopped green chillies or serrano pepper</h4>
+            <h4> 7. Sauté for 10 to 12 seconds or until the raw aroma of the ginger and garlic goes away.</h4>
+            <h3>  ** Sauté Tomatoes</h3>
+            <h4> 8. Add 1.25 cups finely chopped tomatoes (about 2 medium tomatoes or 1 large tomato)</h4>
+            <h4>  9.  Sauté them on medium-low heat until the oil starts leaving the sides of the onion-tomato masala and the tomatoes begin to soften. You should see the tomatoes becoming mushy and pulpy.</h4>
+            <h4> 10. Add ¼ teaspoon turmeric powder, 1 pinch of asafoetida (hing),1 teaspoon coriander powder and 1 teaspoon Kashmiri red chilli powder.</h4>
+            <h4> 11. Mix well and sauté for a minute on a low heat.</h4>
+            <h2> ** Add Water</h2>
+            <h4> 12. Add the kala chana together with 1.5 cups wate</h4>
+         <h4>  13. Season with salt as required and mix again.</h4>
+            <h2> ** Pressure Cook Kala Chana</h2>
+            <h4> 14. Pressure cook kala chana on a medium heat for 10 to 11 minutes or 10 to 12 whistles (or more, if needed), until the kala chana are cooked well and softened. If the black chickpeas are undercooked, pressure cook further for 5 minutes more.</h4>
+            <h5> a. TIP 1: If there is too much liquid in the gravy, then cook the chana without the lid until some water evaporates. You can also mash a few chana pieces for the gravy to thicken.</h5>
+               <h5>   b. TIP 2: On occasions when I have time, I blend a ladle (roughly ¼ cup) of the cooked kala chana with some water to make a medium-thick paste and add it to the gravy. Mix this paste with the curry and simmer for a couple of minutes. This technique makes the curry taste fabulous and is one tip I highly recommend</h5>
+            
+         <h4>  15.  When you get the desired consistency, sprinkle ½ teaspoon garam masala. Mix well.</h4>
+            <h4> 16. Add 1 to 2 tablespoon chopped coriander leaves (optional) to the Punjabi kala chana curry.</h4>
+            <h4> *your kala chana is ready*</h4>
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">BATHUA-SAAG</h2>
+      <img src="{% static 'bathua saag.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h3> Ingredients of Bathua ka Saag</h3>
+   <br>
+         <h4> 1. 3 Servings</h4>
+            <h4>2. 1 kilograms bathua saag</h4>
+         <h4> 3. 2 green chilli </h4>
+            <h4>4. 4 teaspoon mustard oil</h4>
+         <h4> 5. 2 teaspoon garlic paste</h4>
+            <h4>6. 2 teaspoon cumin seeds</h4>
+            <h3>7. water As required</h3>
+            <h4>8. For Seasoning</h4>
+            <h4>9. salt As required</h4>
+            <h4>10. 2 teaspoon garam masala powder</h4>
+            <h3>11. For Garnishing</h3>
+            <h4>12. 5 cloves garlic</h4>
+         </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">SOYA CHAAP </h2>
+         <img src="{% static 'soya chaap.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2> preparation</h2>
+                  
+            <h2>for marination:</h2>
+            <h4>1. 10 stick soya chaap</h4> 
+            <h4> 2. oil (for frying)</h4>
+            <h4> 3. ½ cup curd (thick)</h4>
+            <h4> 4. ½ tsp turmeric</h4>
+            <h4> 5. ½ tsp chilli powder</h4>
+            <h4> 6. ½ tsp garam masala</h4>
+            <h4> 7. ½ tsp salt</h4>
+            <h2> **for onion tomato base:</h2>
+         <h4>  8. 2 tbsp oil</h4>
+            <h4> 9. 2 onion (sliced)</h4>
+         <h4> 10. 1 tsp ginger garlic paste</h4>
+         <h4>  11. 4 tomato (sliced)</h4>
+         <h4>  12. for curry:</h4>
+         <h4> 13. 2 tbsp Oil</h4>
+         <h4>  14. 1 tsp butter</h4>
+         <h4> 15. 1 bay leaf</h4>
+         <h4> 16. 1 inch cinnamon</h4>
+         <h4> 17. 5 cloves</h4>
+            <h4>8. 2 pods cardamom</h4>
+            <h4>19. 1 tsp cumin</h4>
+         <h4> 20. ½ tsp turmeric</h4>
+         <h4> 21. ½ tsp chilli powder</h4>
+         <h4>  22. 1 tsp coriander powder</h4>
+         <h4> 23. ½ tsp cumin powder</h4>
+         <h4> 24. 1 cup water</h4>
+         <h4> 25. 1 tsp kasuri methi (crushed) </h4></p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">BASAN-CURRY </h2>
+         <img src="{% static 'basan curry.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2> Ingredients of Besan Kadhi</h2>
+            <H4>1. 3 Cups yogurt</H4>
+            <H4>2. 1 cup gram flour</H4>
+            <H4>3. 1 tsp turmeric</H4>
+            <h4> 4. 1 tsp chilli powder</h4>
+            <h3>   to taste salt</h3>
+            <h4>5. 1 tsp garam masala</h4> 
+            <h4>6. 6 cups water</h4>
+            <h4>7. 1/4 cup oil</h4>
+            <h4>8. 1/2 tsp asafoetida</h4>
+            <h4>9. 2 tsp cumin seeds</h4>
+            <h4>10. 5-6 Whole red chillies</h4>
+            <h2> For tempering:</h2>
+            <h4>11. 1 tbsp clarified butter</h4>
+            <h4>12. 1/2 tsp chilli powder</h4>
+            <h2> For the pakoris:</h2>
+            <h4>13. 1 cup gram flour</h4>
+            <h4>14. 1 tsp salt</h4>
+            <h4>15. 1/2 cup oil</h4>
+         </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">BOIL CHOLA </h2>
+         <img src="{% static 'chola chickpea chaat.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2>Ingredients of Besan Kadhi</h2>
+            <h4>1. 3 Cups yogurt</h4>
+            <h4>2. 1 cup gram flour</h4>
+            <h4>3. 1 tsp turmeric</h4>
+            <h4>4. 1/2 tsp chilli powderto taste salt</h4>
+            <h4>5. 1 tsp garam masala</h4>
+            <h4> 6. 6 cups water</h4>
+            <h4>7. 1/4 cup oil</h4>
+            <h4>8. 1/2 tsp asafoetida</h4>
+            <h4>9. 2 tsp cumin seeds</h4>
+            <h4>10.  5-6 Whole red chillies</h4>
+            <h2> For tempering:</h2>
+         <h4>  11. 1 tbsp clarified butter</h4>
+            <h4>12.  1/2 tsp chilli powder</h4>
+            <h2> For the pakoris:</h2>
+            <h4>13. 1 cup gram flour</h4>
+            <h4> 14. 1/2 tsp salt</h4>
+            <h4>15. 1/2 cup oil</h4>
+            </p>
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">PALAK-SAAG</h2>
+         <img src="{% static 'palak-saag....webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2> For The Saag:</h2>
+            <h4>  1. 2 bunch of spinach (palak), chopped</h4>
+            <h4>  2. 2 to 3 radish with tender leaves (mooli), chopped</h4>
+            <h4> 3. 1 large onion, chopped</h4>
+            <h4> 4. 2 to 3 medium size tomatoes, chopped</h4>
+            <h4>  5. 1 green chili, chopped</h4>
+            <h4>  6. 1 inch ginger , chopped</h4>
+            <h4> 7. 5 to 6 small to medium garlic cloves , chopped</h4>
+            <h4> 8. 1/2 teaspoon red chili powder</h4>
+            <h4> 9. 2 to 3 tablespoons Butter </h4>
+            <h4> 10. 1 tablespoon maize flour (makki ka atta)</h4>
+            <h4>11. ½ cup water</h4>
+            <h4> 12. salt as required</h4>
+            <h2>   For Tempering The Saag For 2-3 Servings</h2>
+            <h4> 13. 1 medium sized onion, finely chopped enough for saag meant for 2 people</h4>
+            <h4> 14. 1 small green chili, chopped (optional)</h4>
+            <h4> 15. 1 teaspoon chopped ginger, optional</h4>
+            <h4>16. 1 to 2 tablespoons Ghee (clarified butter)</h4> 
+            </p>
+            </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">PLAIN-PANEER</h2>
+         <img src="{% static 'paneer-butter-masala-5-500x500.webp'%}" alt="not connected{">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2>Ingredients</h2>
+            <h4> For cashew paste</h4>
+            <h4> 18 to 20 whole cashews</h4>
+            <h4>    1/2 cup hot water for soaking cashews</h4>
+            <h3> For tomato puree</h3>
+            <h4>  2 cups diced tomatoes or 300 grams tomatoes or 4 to 5 medium size - pureed</h4>
+            <h3> For ginger-garlic paste</h3>
+            <h4>1 inch ginger</h4>
+            <h4>  3 to 4 medium -sized garlic cloves</h4>
+            <h3> Other ingredients</h3>
+            <h4> 2 tablespoons Butter or 1 tablespoon oil + 1 or 2 tablespoons butter</h4>
+            <h4> 1 tej patta (Indian bay leaf) - optional</h4>
+            <h4> 1/2 to 1 teaspoon kashmiri red chili powder or deghi mirch or ¼ to ½ teaspoon cayenne pepper or paprika</h4>
+            <h4> 1.5 cups water or add as required</h4>
+            <h4> 1 inch ginger - julienned, reserve a few for garnish</h4>
+            <h4> 1 or 2 green chili - slit, reserve a few for garnish</h4>
+            <h4> 200 to 250 grams Paneer (Indian cottage cheese) -cubed or diced</h4>
+            <h4> 1 teaspoon kasuri methi (dry fenugreek leaves) - optional</h4>
+            <h4> 1/2 to 1 teaspoon garam masala or tandoori masala</h4>
+            <h4> 2 to 3 tablespoons low-fat cream or half & half or 1 to 2 tablespoons heavy cream - optional</h4>
+               <h4>  1/4 to 1 teaspoon sugar - optional, add as required depending on the sourness of the tomatoes</h4>
+            <h4>  salt as required</h4>
+            <h3> For garnish</h3>
+            <h4> 1 to 2 tablespoons chopped coriander leaves (cilantro ) - optional</h4>
+            <h4> a few ginger julienne</h4>
+            <h4> 1 tablespoon low fat cream or 1 tablespoon heavy cream - optional</h4>
+            <h4> 1 to 2 teaspoons Butter - optional</h4>
+         </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">MIX-DAL </h2>
+         <img src="{% static 'mix dall.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>Cooking Lentils</h2>
+            <h4> 1. Pick and rinse the lentils a couple of times. If you want you can also soak the lentils in water for an hour. Soaking the lentils helps them to cook faster. Also it is best to use fresh lentils and not the aged lentils as they take more time to Cook</h4>
+            <h4> 2. Add the lentils to a pressure cooker along with a pinch of turmeric powder. You can also cook the lentils in a pot or pan or in an instant pot</h4>.
+            <h4> 3. Also add 2 cups of water</h4>
+            <h4> 4. Pressure cook for 18 to 20 minutes on a low to medium flame. when the pressure settles down on its own, open the lid and check the dals. the lentils should be cooked very well and softened.</h4> 
+            
+            <h3> Sauteing Onions, Tomatoes, Spices</h3>
+         <h4> 1. In a kadai or thick bottomed pan, heat 1.5 tablespoon oil or ghee. Add all the ‘whole spices’ and saute them till they crackle and become fragrant.</h4>
+                  <h5> In this below photo the whole spices added are:</h5>
+                  <h5> 1 teaspoon cumin seeds</h5>
+                  <h5> 1/2 inch cinnamon</h5>
+                  <h5> 2 to 3 cloves</h5>
+                  <h5> 2 green cardamoms</h5>
+                  <h5> 1 tej patta or Indian bay leaf</h5>
+            
+         <h4> 2. Then add 1 medium sized chopped onions or ⅓ cup chopped onion.</h4>
+         <h4>  3. On a low to medium flame, stir often and saute till the onions turn light golden. Keep on stirring often so that they cook evenly.</h4>
+         <h4> 4. Then add 1 teaspoon crushed ginger, 1 teaspoon crushed garlic, 2 to 3 slit green chilies & 2 to 3 dry red chilies.</h4>
+            <h4> 5. Mix well and saute till the raw aroma of ginger and garlic goes away. It takes a few seconds</h4>
+            <h4>  6. Add 1 teaspoon crushed kasuri methi (dry fenugreek leaves) and stir.</h4>
+            <h4> 7. Now add 1 large size chopped tomato or ½ cup chopped tomato. You can also canned tomatoes or ¼ cup tomato puree.</h4>
+            <h4> 8. Mix well and begin to saute the tomatoes on a low to medium flame.</h4>
+            <h4>  9. Stir and saute till the tomatoes soften and become pulpy.</h4>
+            <h4>  10. Then add the following spices one by one:</h4>
+
+                  <h5> 1/4 teaspoon turmeric powder</h5>
+                  <h5> 1/2 teaspoon red chili powder or cayenne pepper</h5>
+                  <h5> 1/2 teaspoon coriander powder</h5>
+                  <h5> 1/4 teaspoon garam masala powder</h5>
+                     <h5> a pinch of asafoetida (hing)</h5>
+            <h4> 11. Mix the spice powders with the rest of the onion-tomato masala</h4>
+            <h2> Making Dhaba Dal</h2>
+            <h4> 12. Add the cooked lentils.</h4>
+            <h4> 13. Mix well.</h4>
+            <h4> 14. Add ½ to ⅔ cup water or as required. For a thicker consistency add less water.</h4>
+            <h4> 15. Stir and mix very well.</h4>
+            <h4> 16. Simmer the dal on a low flame for about 6 to 7 minutes or till the dal thickens a bit. Keep on stirring the dal at intervals so that it does not stick to the bottom of the pan.</h4>
+            <h4> 17. When the dhaba style dal is done, switch off the flame. Add about 1 to 2 tablespoons chopped coriander leaves. Reserve the remaining 1 tablespoon coriander leaves for garnish</h4>
+            <h4> Serving </h4> 
+         </p>
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">CHANA-DAL</h2>
+         <img src="{% static 'chana dal.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p>
+            <h4>Cook Lentils</h4>
+         <h4>   1. First, rinse 1 cup of chana dal (split chickpeas) in running water for a couple of times. Drain thoroughly.</h4>
+         <h4>  2. Place the lentils in a bowl. Then cover with water and soak the chana dal for one hour. For a quicker method, soak the lentils in hot water (not boiling!) for about 30 </h4>
+         <h4>  3. When done soaking, drain the water</h4>
+         <h4>  4. Add the chana dal to your pressure cooker or Instant Pot, along with ¼ teaspoon of turmeric powder.</h4>
+            <h4> 5. Now add about 2.5 to 3 cups water in a 3 litre stovetop pressure cooker. Stir well.</h4>
+
+            <h3>    For instant pot, add about 2 to 2.5 cups water and stir to combine</h3>
+         <h4>  6. Pressure cook the chana dal for about 10 to 11 minutes, or 7 to 8 whistles, on a high heat in a stove-top pressure cooker.</h4>
+            <h4> 7. Allow the cooker or Instant Pot to do a complete natural pressure release before unsealing the lid - this means to let the pressure fall naturally in the stovetop cooker or Instant pot</h4>
+            <h4> Check the lentils for doneness – they should be very soft and easy to mush with the back of a spoon. Cover the pot and set aside.</h4>
+
+         <h4>   If the lentils are undercooked, pressure cook again for some more minutes until they are softened.</h4>
+            <h2> ** Make Chana Dal</h2>
+            <h4> 8. Next, heat 3 tablespoons of oil or ghee in a large pan on the stovetop on medium heat. Add 1 teaspoon of cumin seeds and fry for a few seconds, until they crackle and sizzle.</h4>
+            <h4> 9. Now add 4 or 5 finely chopped garlic cloves, about 2 teaspoons.</h4>
+            <h4> 10. Fry until the garlic is light golden.</h4>
+            <h4> 11. Now add ½ a cup of chopped onions</h4>
+            <h4> 12. Stir and sauté.</h4>
+            <h4> 13. Continue to sauté the onions until golden.</h4>
+            <h4> 14. Add 1 cup of chopped tomatoes (2 or 3 medium tomatoes) to the pan.</h4>
+            <h4> 15. Add ½ to 1 teaspoon of finely chopped ginger and ½ a teaspoon of finely chopped green chilies.</h4>
+            <h4> 16. Mix well.</h4>
+            <h4> 17. Then add all the dried spices:</h4>
+
+               <h3> ½ teaspoon red chili powder or cayenne pepper</h3>
+               <h3> ¼ teaspoon turmeric powder</h3>
+               <h3> ½ teaspoon garam masala powder</h3>
+               <h3> ½ teaspoon dry mango powder (omit if you do not have and add a bit of lemon juice once the cooking is complete.)</h3>
+               <h3> a pinch of asafoetida (hing, optional)</h3>
+               <h3> 1 teaspoon coriander powder (ground coriander)</h3>
+
+            <h4> 18. Mix and continue to sauté.</h4>
+            <h4> 19. Cook until the tomatoes are softened and the oil starts to leave the side of the masala mixture.</h4>
+            <h4> 20. Now add 1 teaspoon of crushed dry fenugreek leaves(kasoori or kasuri methi). Skip adding dry fenugreek leaves if you do not have it.</h4>
+            <h4> 21. Stir to combine.</h4>
+            <h4> 22. Next, add the cooked chana dal along with its stock to the pan. Or, add the sautéed masala mixture to the cooked dal if you have used Instant pot for cooking the lentils.</h4>
+               <h4> Cook Chana Dal Further</h4>
+            <h4> 23. Stir very well. Mash some lentils with the spoon as you go on stirring. Mashing some lentils helps the dal to thicken.</h4>
+
+            <h4> If the dal looks a bit too thick, add about ½ a cup of water or more, and stir. Continue to add water and stir until the consistency is somewhere like a curry – saucy and with medium to medium-thick consistency but loose and pourable.</h4>
+            <h4> 24. Season with salt to taste.</h4>
+            <h4> 25. Either on the stovetop or using the sauté Instant Pot function, cook the dal for another 6 to 8 minutes or more. This should help the chana dal thicken up a bit and really combine the flavors well.</h4>
+            <h4> 26. If serving chana dal with rice, I recommend making this dish with a medium consistency.</h4>
+
+         <h4>  If serving chana dal with roti or naan, then you can might want to prepare it with a slightly thicker consistency for scooping.</h4>
+            <h4> 27. Add 1 to 2 tablespoons of fresh chopped coriander (cilantro) leaves, or garnish with coriander leaves while serving chana dal.</h4>
+            <h4> 28. Stir again and serve hot or warm.</h4>
+            <h4> 29. Enjoy homemade chana dal with roti, steamed basmati rice, cumin rice </h4>
+         </p>
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">MOONG-DAL </h2>
+         <img src="{% static 'moong dal.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>preparation</h2>
+            <h4>  1. Rinse ½ cup of moong dal (split husked mung lentils) in water.</h4>
+            <h4>  2. In a pressure cooker add 1 medium sized finely chopped onion, 1 medium sized chopped tomato and ½ inch finely chopped ginger. next add ⅓ teaspoon turmeric powder and ¼ teaspoon red chili powder in the cooker.</h4>
+            <h4> 3. Next add 1.5 cups water to the cooker. Stir well.</h4>
+            <h4> 4. Pressure cook for 5 to 6 whistles on medium flame till the dal is cooked and soft. Once the pressure settles down, remove the lid and stir the dal.</h4>
+            <h4> 5. If the dal looks thick, then add some water.</h4>
+            <h4>  6. Simmer the moong dal for 1 to 2 minutes or more till you get the right consistency.</h4>
+            <h4> 7. Add salt as required and stir well. Keep the dal aside</h4>
+            <h2> Tempering for Moong Dal</h2>
+            <h4> 8. Measure and keep all the ingredients ready for tempering. In a small pan, heat 2 to 3 tablespoons oil or ghee or butter.</h4>
+            <h4> 9. First fry 1 teaspoon cumin seeds. The cumin seeds should change color and crackle. Fry on a low to medium-low heat so that the spices do not get burnt.</h4>
+            <h4>  10. Next add 4 to 5 lightly crushed garlic cloves and 1 to 2 slit green chilies. Fry for some seconds. Don’t brown the garlic. Switch off the flame. </h4>
+            <h4>  11. Now add ¼ to ½ teaspoon garam masala powder, ¼ teaspoon red chili powder and 1 pinch of asafoetida (hing). Switching off the flame ensures that the spice powders don’t get burned.</h4>
+            <h4>  12. Quickly mix the spice powders well with a spoon.</h4>
+            <h4>   13. Immediately pour the tempering mixture in the moong dal.</h4>
+            <h4>  14. Stir the moong dal.</h4>
+            <h4> 15. Serve Moong Dal Tadka hot with steamed rice or chapatis. The moong dal tastes better as it is and there is no need to garnish or add coriander leaves to it. But if you want you can always garnish with some coriander leaves. For a slight tang you can also squeeze some lemon juice.</h4>
+
+         </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">BROCCOLI </h2>
+         <img src="{% static 'brockley.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2>preparation</h2>
+            <h4> 1 heads broccoli, separated into florets</h4>
+
+            <h4> 1 teaspoons extra-virgin olive oil</h4>
+            
+            <h4> ½ teaspoon sea salt</h4>
+            
+            <h4> ¼ teaspoon ground black pepper</h4>
+            
+            <h4> ½ clove garlic, minced</h4>
+            
+            <h4> ¼ teaspoon lemon juice</h4>
+
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">DRY SAAG </h2>
+         <img src="{% static 'sag.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h3>How to Wash, Dry and Prep Spinach</h3>
+            <h4> Most baby spinach in pre-packaged bags comes pre-washed, but we recommend washing and drying it anyway.</h4>
+            <h4> Mature spinach that are sold in bundles are not pre-washed and can be gritty. Best to trim or de-stem them and at least double wash them by dunking them in a sink full of cold water.</h4>
+            <h4>  No need to de-stem baby spinach. You can cook the bunches stems and all. However, with more mature spinach, you'll want to trim off most of the large stems, since they can be </h4>
+            <h4>  A salad spinner makes quick work of drying spinach, but you can also leaves dry by placing them between two clean kitchen towels. Cloth towels absorb more water than paper ones.</h4>
+            <h2> Ingredients</h2>
+            <h4> 2 large bunches spinach, about 1 pound</h4>
+            <h4>  2 tablespoons extra virgin olive oil</h4>
+            <h4>  3 cloves garlic, sliced</h4>
+            <h4> Salt to taste</h4>
+            <h2>  Method</h2>
+            <h4> Clean and prep the spinach:</h4>
+            <h4> 1. Cut off the thick stems of the spinach and discard. Clean the spinach by filling up your sink with water and soaking the spinach to loosen any sand or dirt. Drain the spinach and then repeat, soaking and draining. Put the spinach in a salad spinner to remove any excess moisture..</h4>
+
+            <h2>  Sauté the garlic:</h2>
+            <h4> 2. Heat 2 tablespoons olive oil in a large skillet on medium high heat. Add the garlic and sauté for about 30 seconds, until the garlic just begins to brown</h4>
+               <h2> Add the spinach to the pan and cook:</h2>
+            <h4> 3. Add the spinach to the pan, packing it down a bit if you need to with your hand. Use a couple of spatulas (or tongs) to lift the spinach and turn it over in the pan, so you coat more of it with the olive oil and garlic. Do this a couple of times. Cover the pan and cook for 1 minute. Uncover and turn the spinach over again. Cover the pan and cook for an additional minute.</h4>
+            <h2>  Remove from heat and drain the excess liquid:</h2>
+            <h4>  4. After 2 minutes of covered cooking the spinach should be completely wilted. Remove from heat.</h4>
+            
+            <h4> Drain any excess liquid from the pan. Add a little more olive oil, if you wish. Then, sprinkle with salt to taste. Serve immediately.</h4>
+            </p> 
+            </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">DRY CHANA</h2>
+         <img src="{% static 'dry chana.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2>Ingredients</h2>
+            <h4> 4 servings</h4>
+            <h4> 1. ¼ cup double-concentrated tomato </h4>
+         <h4>  2. 3 garlic cloves, finely grated</h4>
+            <h4> 3. 1½ tsp. ground coriander</h4>
+         <h4>  4. 1½ tsp. ground cumin</h4>
+            <h4> 5. 1 tsp. crushed red pepper flakes</h4>
+         <h4>  6. 1 medium head of green or savoy cabbage (about 2 lb. total)</h4>
+            <h4> 7. ½ cup extra-virgin olive oil, divided</h4>
+            <h4> Kosher salt</h4>
+         <h4>  8. 3 Tbsp. chopped dill, parsley, or cilantro</h4>
+         <h4>  9. Full-fat Greek yogurt or sour cream (for serving)</h4>
+            <h2>  Preparation</h2>
+            <h3> Step 1: Preheat oven to 350°. Mix tomato paste, garlic, coriander, cumin, and red pepper flakes in a small bowl.</h3>
+            
+            <h3> Step 2: Cut cabbage in half through core. Cut each half through core into 4 wedges.</h3>
+            
+            <h3> Step 3: Heat ¼ cup oil in a large cast-iron skillet over medium-high. Working in batches if needed, add cabbage to pan cut side down and season with salt. Cook, turning occasionally, until lightly charred, about 4 minutes per side. Transfer cabbage to a plate.</h3>
+            
+               <h3>  step 4: Pour remaining ¼ cup oil into skillet. Add spiced tomato paste and cook over medium heat, stirring frequently, until tomato paste begins to split and slightly darken, 2–3 minutes. Pour in enough water to come halfway up sides of pan (about 1½ cups), season with salt, and bring to a simmer. Nestle cabbage wedges back into skillet (they should have shrunk while browning; a bit of overlap is okay). Transfer cabbage to oven and bake, uncovered and turning wedges halfway through, until very tender, liquid is mostly evaporated, and cabbage is caramelized around the edges, 40–50 minutes.</h3>
+            
+            <h3> Step 5: Scatter dill over cabbage. Serve with yogurt alongside.</h3>
+         </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">MIX VEG </h2>
+         <img src="{% static 'mix-veg-.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h3>How to Make Mix Veg Recipe</h3>
+         <h2> preparation</h2>
+         <h4>  Sauté Onions</h4>
+         <h4> 1. Heat 3 tablespoons oil in a kadai (wok)or skillet or a pan. Then add 1 teaspoon cumin seeds and let them crackle.</h4>
+            
+         <h4> Use any neutral oil. I usually make this curry in sunflower oil and sometimes in peanut oil, which by the way is not a neutral flavored oil.</h4>
+         <h4> 2. When the cumin seeds finish crackling, add ½ cup chopped onions.</h4>
+         <h4> 3. Mix well and begin to sauté onions on a low to medium flame. </h4>
+
+         <h5> TIP: Stir often when sautéing onions to prevent burning, which can taste rather bitter.</h5>
+         <h4> 4. Sauté onions till they turn light golden.</h4>
+         <h3> Sauté Ginger and Garlic Paste</h3>
+         <h4> 5. Add 1 teaspoon ginger-garlic paste.</h4>
+         <h4> 6. Mix well and sauté for until the aroma of raw ginger and garlic goes away, about 10 to 12 second</h4>
+         <h3> Sauté Tomatoes</h3>
+   `       <h4> 7. Then add 1 tightly packed cup of finely chopped tomatoes.</h4>
+         <h4> 8. Mix well and begin to sauté tomatoes on a low heat. Stir often.</h4>
+
+         <h5> If the ingredients starts sticking to the pan, add in some splashes of water. Mix and deglaze the pan removing any stuck particles or bits. Continue to sauté further.</h5>
+         <h4> 9. Sauté until the tomatoes turn pulpy, glossy and you see oil releasing from the sides.</h4>
+         <h5> Add Ground Spices</h5>
+         <h4> 10. Add ½ teaspoon turmeric powder, ½ teaspoon Kashmiri chili powder or paprika, ½ teaspoon garam masala powder and 2 teaspoons coriander powder.</h4>
+
+         <h5> TIP: For a spicier curry, add more Kashmiri chili powder to taste</h5>
+         <h4> 11. Mix the ground spice powders very well with the onion-tomato mixture and sauté for some seconds or up to a minute.</h4>
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">PANEER BHUJI</h2>
+         <img src="{%static 'paneer bhuji.png'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h3> Paneer Bhurji</h3>
+            <h4> Key Ingredients: Milk,Citric acid, Onions,Oil, Green chillies, Coriander leaves,salt, black pepper,  dhaniya powder , red chilli powder, turmeric, cumin powder and garam masala.</h4>
+
+            <h4> Step 1 : Take one litre of milk and add citric acid to it when it begins to boil. The milk will give an oily texture and release some water. Drain the water using a  sieve and separate paneer from it.</h4>
+
+            <h4> Step 2: Now take a grinder and grind 2 onions, 1 tomato and 3 green chillies.Make a thick paste of it.</h4>
+            
+            <h4> Step 3: Add some oil in the pan and put the puree inside it. Add ½ teaspoon of each of the spices, salt, black pepper,  dhaniya powder , red chilli powder, turmeric, cumin powder and garam masala in the pan. Stir it well.</h4>
+            
+            <h4> Step 4:  Add paneer in this masala and mix all the ingredients properly. Add half cup of water in the mixture and let it boil.</h4>
+            
+            <h4>  Step  5: After it is done garnish it with coriander leaves and serve it hot with roti or paratha.</h4>
+            
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">PANEER BASAN </h2>
+         <img src="{% static 'paneer besan chilla.png'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2>Paneer Besan Chilla</h2>
+
+            <h4> Key Ingredients: Paneer, Besan, Onions, Tomatoes, Green chillies, Coriander leaves,  salt     ,black pepper,  dhaniya powder , red chilli powder and water</h4>
+               
+               <h4>  Preparation time: 10 minutes</h4>
+               
+               <h4> Cooking time: 20 minutes</h4>
+               
+               <h4> Step 1 : Prepare a batter of 1 cup besan, 1 chopped onion, 1 chopped tomato, 3 green chillies, some spinach leaves, coriander leaves, ½ teaspoon salt, ½ teaspoon chilli powder, ½ teaspoon black pepper, ½ teaspoon dhaniya powder and ½ cup paneer.</h4>
+               
+               <h4>  Step 2 : Add one cup of water and mix the batter very well so that there are no crumbs of besan in it.Add water according to your convenience, the batter should be in semi liquid formation. </h4>
+               
+               <h4>  Step 3 : Take a non-stick pan and let it heat for a while, add a few drops of oil to the pan. Spread the oil all over the pan, then remove the oil from the pan using a tissue paper. This way the pan will gain a little smoothness on its surface.</h4>
+               
+               <h4> Step 4: Now put some amount of the mixture on the pan and apply oil to the corner of the pan. Let it cook from the bottom and get a brownish texture Then turn your chilla upside down. After getting a brownish text from both sides of the chilla,  remove it from the pan and grate  paneer and coriander leaves on it.</h4>
+               
+               <h4> Step 5: Serve it hot with tomato ketchup or green chutney.</h4>
+            </p>  
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">ALOO PEA</h2>
+         <img src="{% static 'carrot.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <P>
+               <H4>Heat oil in a pan. Add cumin seeds, mustard seeds, and asafetida.</H4>
+               <H4> When the seeds to splutter, add chopped onion and saute for 3 minutes.</H4>
+               <H4> Add crushed ginger-garlic and saute for 2 minutes.</H4>
+               <H4>  Now add green peas, salt and let it cook for 3 minutes.</H4>
+               <H4> Add cubed potatoes along with coriander powder, turmeric powder, MIN red chili powder, dried mango powder, and mix well</H4>
+               <H4>Add 2 tbsp water, and mix well. Cook on medium heat for 3-4 more minutes.(Keep stirring occasionally)</H4>
+               <H4> You Potato Peas Stir Fry is ready. Serve hot with any bread of your choice.</H4>
+               .</P>
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">VEG WITH DRY PANEER</h2>
+         <img src="{% static 'paneer tikka.png'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p>plane Paneer Tikka Roll
+                  
+            <h3> Making of plane Paneer Tikka</h3>
+            
+            <h4>  Key Ingredients: ½ cup curd, 1 teaspoon chili powder, one fourth teaspoon turmeric powder, 1 teaspoon ginger garlic paste 2 teaspoon besan, half teaspoon chaat masala and  half teaspoon Garam Masala</h4>
+            
+            <h4>  Preparation time: 20 minutes</h4>
+            
+            <h4> Cooking time: 20 minutes</h4>
+            
+            <h4> Step 1 : Marinate the Paneer cubes by adding curd,minimum chilli powder, salt, ginger garlic paste, besan,chat masala and little Garam Masala to it. Add one chopped onion and capsicum to it. Leave it for 30 minutes.</h4>
+            
+            <h4> Step 2 : Take a non-stick pan and grease it with olive oil. Put the marinated paneer in the pan and let it cook for 5 minutes in medium flame.</h4>
+            
+            <h3> Making of plane Paneer Tikka Roll</h3>
+            
+            <h4> Step 1 : Place the chapati on the tawa and put some portion of the marinated paneer tikka on it. Add some chopped onions,green chilli chutney, tomato ketchup and some mayonnaise to it. Roll the chapati such that the ingredients get binded.</h4>
+            
+            <h4> Step 2: Cook it for 1 minute on the tawa and serve it hot.</h4>
+         </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">SHRIMPS </h2>
+         <img src="{% static 'shrimps.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2> Ingredients</h2>
+
+               <h4> 3 stalks celery (1 quartered, 2 thinly sliced)</h4>
+               <h4> 3 small cloves garlic (2 smashed, 1 chopped)</h4>
+               <h4> Juice of 1 lemon</h4>
+               <h4> Kosher salt and freshly ground pepper</h4>
+            <h4>  8 ounces baby carrots, halved lengthwise</h4>
+               <h4> 3/4 pound small shrimp, peeled and deveined</h4>
+               <h4> 1/2 pound sea scallops, halved horizontally</h4>
+            <h4>  1 small avocado, halved, pitted and peeled</h4>
+               <h4> 2 romaine lettuce hearts, torn</h4>
+               <h4> 1 tablespoon capers, plus 1 tablespoon brine from the jar</h4>
+            <h4>  2 cups croutons</h4>
+            <h4>  1 tablespoon light mayonnaise</h4>
+                              <h2>   Directions</h2>
+               
+            <h4>  01. Combine the quartered celery, smashed garlic, half of the lemon juice, 10 cups water, and salt and pepper to taste in a large saucepan. Cover and bring to a boil, then uncover, add the carrots and cook 2 minutes.</h4>
+            <h4>  02. Add the shrimp and cook until opaque, about 4 minutes. With a slotted spoon, transfer the carrots and shrimp to a colander and rinse under cold water. Return the water to a boil, add the scallops and cook until opaque, 1 to 2 minutes. Remove the scallops with a slotted spoon, add to the colander and rinse under cold water.</h4>
+            <h4>  03. Ladle out 1/3 cup of the poaching liquid; set aside to cool. Dice half of the avocado and combine with the sliced celery, lettuce, capers and croutons in a large bowl. Add the carrots, shrimp and scallops.</h4>
+            <h4> 04. Puree the remaining avocado half in a blender with the reserved poaching liquid, the remaining lemon juice, the caper brine, chopped garlic, mayonnaise, 1/2 teaspoon salt, and pepper to taste. Toss with the salad and season with salt and pepper.</h4>
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">DRY TAWA PANEER</h2>
+         <img src="{% static 'tawa paneer.png'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>plane Tawa Paneer </h2>
+                  
+               <h4> Key Ingredients: 1 chopped onion, 3/4th teaspoon ginger, 1 tablespoon olive oil, 3/4th cup chopped  tomato,  1/4th cup chopped capsicum, 2 cups paneer, 3/4th teaspoon garam Masala, salt, 2 cup paneer and cashew nuts</h4>
+               
+               <h4> Preparation time: 20 minutes  </h4>
+               <h4> Cooking time: 20 minutes</h4>
+               
+            <h4>   Step 1: Take a pan with olive oil ,add cumin seeds and let it splutter. Now add chopped onions and let it turn brown.</h4>
+               
+               <h4> Step 2: Add chopped tomatoes, capsicum, cashew nuts, garam masala and salt.Pour half cup water and let the vegetables boil inside the pan.</h4>
+               
+            <h4>  Step 3 : Grind all the vegetables to make a puree out of it. Add all the mentioned spices like salt, chilli powder, dhaniya powder, turmeric and garam masala.</h4>
+               
+            <h4>  Step 4: Add cashew nut paste to this puree. Heat it on low flame till a thick gravy comes out.</h4>
+               
+            <h4>  Step 5: Add diced paneer in the gravy, garnish it with coriander leaves and serve it hot with chapatis.</h4>
+               
+               </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">DRY BITTER GOURD</h2>
+         <img src="{% static 'karela-sabzi-.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2> Recipe</h2>
+               <h3> to make Karela ki Sabji</h3>
+               <h4> 1. Rinse and then peel 250 grams karela or 5 small to medium-sized karela. Wash them in running water. Then chop in small pieces.</h4>
+               
+            <h4>  Remove the seeds while chopping. If the karela is small and tender, then these will have tender seeds and they cannot be removed. </h4>
+            <h4>  If karela is very bitter, then add some salt to chopped karela pieces. Mix very well and allow this mixture to sit for 15 to 20 minutes.</h4>
+
+            <h4>  Then squeeze the karela and rinse them very well in water. This will get rid of some bitterness from the karela.</h4>
+               <h4> 2. In a kadai or pan, heat 2 tablespoons of oil. Use any neutral-flavored oil. Let the oil become hot. Then reduce the heat to a low and add the chopped karela.</h4>
+               <h4> 3. Mix chopped karela with oil and sauté on a low to medium-low heat. Stir often while sautéing.</h4>
+               <h4> 4. Sauté the karela for 4 to 5 minutes.</h4>
+               <h4> 5. Then add 1.5 cups of thinly sliced onions.</h4>
+               <h4> 6. Mix the sliced onions with the karela pieces.</h4>
+            <h4>  7. Sprinkle ¼ teaspoon turmeric powder, ½ teaspoon Kashmiri red chili powder and salt as per taste.</h4>
+               <h4> 8. Mix very well.</h4>
+               <h4> 9. On a low heat continue to sauté stirring often. Sprinkle some water if onions or karela start sticking to the pan. Deglaze removing the ingredients stuck at the bottom and continue to saute.</h4>
+            <h4>  10. Sauté for 10 to 12 minutes on low or medium-low heat till both the karela and onions are cooked. The onions will also become golden and caramelize by this time.</h4>
+
+               <h4> They are not overly caramelized but lightly caramelized having a nice softness and sweetness that complements and balances the bitter taste of the karela.</h4>
+
+            <h4>  Keep on stirring at regular intervals. Check the seasonings. Add more red chili powder or salt if required.</h4>
+               <h4> 11. When the onions have lightly caramelized and the bitter gourd pieces have softened and are fork tender, then sprinkle ½ to 1 teaspoon dry mango powder (amchur powder) and ½ teaspoon garam masala powder.</h4>
+
+            <h4>  For a more tangy taste increase the amount of dry mango powder by ½ teaspoon. If you don’t have dry mango powder then you can drizzle ½ to 1 teaspoon lemon juice.</h4>
+               <h4> 12. Mix very well and then switch off the heat.</h4>
+            <h4>   Serve karela ki sabji with phulka, paratha and a bowl of fresh plain curd (yogurt) or sweetened curd.</h4>
+               
+               
+               **
+            <h4>  2 tablespoons oil</h4>
+            <h4> * 250 grams bitter gourd or 5 small to mediums sized karela or 2 cups chopped karela</h4>
+            <h4>  * 200 grams onions or 2 large onions or 1.5 cups thinly sliced onions</h4>
+            <h4>  * ¼ teaspoon turmeric powder (ground turmeric)</h4>
+            <h4>   * ½ teaspoon kashmiri red chili powder</h4>
+            <h4>  * salt as per taste</h4>
+            <h4> * ½ teaspoon Garam Masala Powder</h4>
+            <h4> * ½ to 1 teaspoon dry mango powder (amchur powder), add as required</h4>
+
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> BITTER GOURD</h2>
+         <img src="{% static 'karala2.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h3> Ingredients</h3>
+               <h4>  4 tender karelas (bitter gourds)</h4>
+               <h4>  2 tablespoons vegetable oil, or canola or sunflower oil</h4>
+               <h4> 6 curry leaves</h4>
+               <h4>  1 teaspoon cumin seeds</h4>
+               <h4> 1 teaspoon black mustard seeds</h4>
+               <h4> 2 green chilies, slit</h4>
+               <h4> 1 small onion, finely chopped</h4>
+               <h4> 1 teaspoon grated ginger</h4>
+               <h4> 1 teaspoon garlic paste</h4>
+               <h4> 1 tablespoon ground coriander</h4>
+               <h4> 1 teaspoon raw mango powder</h4>
+               <h4>1/2 teaspoon ground turmeric</h4>
+               <h4> 1/2 teaspoon red chili powder</h4>
+               <h4> 1 teaspoon tamarind paste</h4>
+               <h4> Salt, to taste</h4>
+               <h4> 1 tablespoon grated jaggery</h4>
+               <h4> Cilantro leaves, chopped, for garnish</h4>
+            
+            <h3>  lets make it:</h3>
+            
+            <h4>  01.  Gather the ingredients.</h4>
+               <h4> 02.  Wash the karelas well and pat dry. Cut off the top and "tail" of each karela and discard.</h4>
+            <h4>  03.  Slit the gourds vertically down the center. Use a spoon to scoop out all the seeds from the center and discard the seeds. Cut the karela halves into 1/4-inch-thick pieces. Set aside.</h4>
+               <h4> 04.  Heat the oil in a pan and add the curry leaves, cumin and mustard seeds, and green chilies.</h4>
+               <h4> 05.  When they stop spluttering, add the chopped onion and sauté for a minute.</h4>
+               <h4> 06.  Add the ginger and garlic paste and sauté for another minute.</h4>
+               <h4> 07.  Add the coriander, mango powder, turmeric, and red chili powder and mix well. Sprinkle a little water on top and sauté for a minute, stirring well.</h4>
+               <h4> 08.  Add the karela pieces, tamarind paste, and salt to taste; stir and cook until the karela is soft.</h4>
+               <h4> 09.  Stir in the jaggery. Allow the sugar to melt and begin to caramelize a little.</h4>
+               <h4> 10.  Remove from the heat and garnish with the chopped fresh coriander leaves.</h4>
+
+
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">BISCOTTI RECIPE</h2>
+         <img src="{% static 'bread.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h3> INGREDIENTS</h3>
+               <h4> Cooking spray or butter, for coating the pan</h4>
+               <h4> 3 cups all-purpose flour</h4>
+               <h4> 2 teaspoons baking powder</h4>
+               <h4> 1 teaspoon no-salt onion powder</h4>
+               <h4> 3/4 teaspoon no-salt garlic powder</h4>
+               <h4> 1/2 teaspoon baking soda</h4>
+               <h4> 1/2 teaspoon freshly ground black pepper</h4>
+               <h4> 2 large eggs</h4>
+               <h4> 1 cup low-fat buttermilk</h4>
+               <h4> 4 tablespoons (1/2 stick) unsalted butter, melted</h4>
+               <h4> 1/4 cup coarsely chopped fresh dill</h4>
+               <h4> 1/4 cup finely chopped fresh chives (about 1 large bunch)</h4>
+               <h4> 1 cup low-fat cottage cheese, preferably large curd</h4>
+            
+               <h2> INSTRUCTIONS</h2>
+               <h4> 01.  Arrange a rack in the middle of the oven and heat to 350°F. Generously coat a 9x5-inch loaf pan with cooking spray or butter; set aside.</h4>
+               <h4> 02.  Whisk the flour, baking powder, salt, onion powder, garlic powder, baking soda, and pepper in a large bowl; set aside.</h4>
+               <h4> 03.  Whisk the eggs, buttermilk, butter, dill, and chives in a medium bowl until combined. Add the cottage cheese and stir to combine. Pour this mixture into the flour mixture and stir and fold with a rubber spatula just until the flour is incorporated, being careful not to overmix.</h4>
+               <h4> 04.  Scrape the batter into the prepared pan, push it into the corners, and smooth the top. Bake until golden-brown and a tester inserted into the center of the bread comes out clean, about 50 minutes. (Test in several places, as you may hit a piece of cottage cheese.)</h4>
+               <h4> 05.  Place the pan on a wire rack and let cool for 15 minutes. Flip the bread out of the pan onto the rack (run a knife around the edges first if needed) and let cool for at least another 15 minutes before serving.</h4>
+               <h4> RECIPE NOTES</h4>
+               <h3> Storage: Although best eaten fresh, this bread can be wrapped tightly in plastic wrap and stored at room temperature for up to 3 days. It can also be frozen for up to 3 months.</h3>
+               
+               
+            </p>
+
+         </div>
+      </div>
+      
+      <div class="recipe">
+         <h2 style="text-align: center;"> LEMON BRAISED</h2>
+         <img src="{% static 'lemon braised.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>INGREDIENTS</h2>
+               <h4> 1 pound dried small white beans, such as flageolet</h4>
+               <h4> 2 tablespoons olive oil</h4>
+               <h4> 1 small white onion, diced</h4>
+               <h4> 4 cloves garlic, minced</h4>
+               <h4> 2 medium lemons, divided</h4>
+               <h4> 2 pounds boneless, skinless chicken thighs</h4>
+               <h4> Kosher salt</h4>
+               <h4> Freshly ground black pepper</h4>
+               <h4> 4 fresh thyme sprigs</h4>
+               <h4> 2/3 cup finely chopped fresh dill fronds</h4>
+            <h4>  For the mint pesto:</h4>
+               <h4> 4 packed cups fresh mint leaves</h4>
+               <h4> 1/3 cup blanched almonds</h4>
+               <h4> 2 cloves garlic, coarsely chopped</h4>
+               <h4> 1/4 cup olive oil, plus more as needed</h4>
+            
+            <h2>  INSTRUCTIONS</h2>
+            <h4> 1.  Place the dried beans in a large bowl and cover them with an inch of water. Soak for 24 hours, or at least overnight — topping up the water if the beans soak it up. Drain the beans and set aside.</h4>
+            <h4> 2.  Arrange a rack in the middle of the oven and heat to 350°F. Heat the oil in a 4-quart (or larger) Dutch oven or heavy, ovenproof pot over medium heat until shimmering. Add the onion and garlic and cook, stirring frequently, until they are tender and the onion is nearly translucent, 5 to 7 minutes. Add the drained beans and stir to combine. Turn off the heat.</h4>
+            <h4> 3.  Take a sharp vegetable peeler and carefully peel 1 of the lemons. Peel it in wide strips, taking care that you remove only the top yellow layer of peel — you do not want any of the bitter white pith. Add all the lemon peel to the beans. Juice the lemon, add the juice to the beans, and stir to combine. (Reserve the second lemon for later.)</h4>
+            <h4>  4.  Pat the chicken dry, and lightly season all over with salt and pepper. Place the chicken on top of the beans. Add water until it covers the beans and comes up to just below the chicken. Lay the thyme sprigs on top. Turn the heat to high and bring the water to a simmer. Cover the pot and put it in the oven.</h4>
+            <h4> 5.  Bake until the beans are very tender and creamy, about 1 1/2 hours. Check the beans a couple of times throughout and if they are looking dry, add a few splashes of water. The resulting cooked beans should be brothy. Meanwhile, make the mint pesto.</h4>
+            <h4> 6.  Place all the pesto ingredients in a small food processor or chopper and pulse until finely chopped. Transfer to a serving bowl. If not using immediately, store in the refrigerator with plastic wrap completely covering and touching the surface of the pesto to prevent oxidization.</h4>
+            <h4> 7.  Uncover the pot and transfer the chicken to a large plate or clean cutting board. Remove the thyme stalks. Finely grate the zest of the remaining lemon, then juice it. Add the zest, juice, and dill fronds to the beans and stir to combine. Taste and season with salt and pepper as needed. Shred or chop the chicken and place it back on top of the beans. Top with the mint pesto and serve.</h4>
+            <h4> 8.  To serve, scoop up a spoon of beans, and top with chicken. Make sure each serving has a dollop of pesto as well. Serve with a green salad and good bread to soak up the sauce.</h4>
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center">TAMOTA SALAD MIX</h2>
+         <img src="{% static 'tamota salad.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>INGREDIENTS</h2>
+               <h4> 1/2 medium red onion, thinly sliced</h4>
+               <h4> 1 pound tomatoes, preferably with a combination of colors</h4>
+               <h4> 2 tablespoons red wine vinegar</h4>
+               <h4> 1 clove garlic, minced</h4>
+               <h4> Flaky sea salt, such as Maldon</h4>
+            <h4>  1/4 cup extra-virgin olive oil</h4>
+               <h4> 1 medium red bell pepper, seeded and cut into 1-inch pieces</h4>
+               <h4> 1/3 medium English cucumber, thinly sliced</h4>
+               <h4> 1 cup kalamata olives, pitted</h4>
+            <h4>  1/4 cup coarsely chopped fresh dill fronds and tender stems</h4>
+               <h4> 1/4 cup fresh mint leaves, coarsely chopped</h4>
+               <h4> 1 cup crumbled feta cheese</h4>
+               <h4> Freshly ground black pepper</h4>
+               <h4> GET INGREDIENTS</h4>
+            <h4>  Powered by Chicory</h4>
+               <h2> INSTRUCTIONS</h2>
+               <h3> Place the onion in a bowl of cold water and set aside 10 to 15 minutes. Meanwhile, cut the tomatoes into bite-sized chunks and place in a medium bowl; set aside. Place the vinegar, garlic, and a pinch of salt in a large bowl. While whisking constantly, drizzle in the olive oil and whisk until combined.</h3>
+            <h3>  Drain the onion and pat dry with paper towels. Add the red onion, bell pepper, cucumber, olives, dill, and mint to the dressing and toss to combine. Set aside to marinate for 10 minutes. Add the tomatoes and feta and toss gently to combine. Taste and season with more salt and pepper as needed.</h3>
+            <h3>  Using a slotted spoon, transfer the salad to a serving platter, leaving the juices behind. Serve immediately.</h3>
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> AVOCADO </h2>
+         <img src="{% static 'avacado.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p>
+               <h2> Avocado Toast (Plus Tips & Variations)</h2>
+            <h3>   avocado toast recipe</h3>
+      
+            <h3>  How to Make the Best Avocado Toast</h3>
+               <h4> 1. Pick great avocados</h4>
+               <h5> You want ripe but not over-ripe Hass avocados. Look for avocados that yield a bit to a gentle squeeze, but avoid using avocados that are mushy or stringy on the inside. If you run into any bruised or brown bits when you cut them open, scoop those out and discard before mashing the rest.</h5>
+
+            <h4>  2) Buy good bread and toast it well</h4>
+               <h5> I think sturdy, thick-sliced, whole grain bread make the best avocado toast. Golden, well-toasted bread offers a sturdy base and a crisp, shattering contrast against the creamy avocado.</h5>
+
+               <h4> 3) Mash your avocado separately</h4>
+            <h5>  Mashed avocado is more creamy and luxurious than sliced avocado (think guacamole vs. plain avocado). But don’t mash it on the toast! You risk poking holes in your toast or smashing it. Cut your avocados in half, remove the pit, scoop the flesh into a bowl or onto the side of your plate, and mash it up with a fork.</h5>
+
+               <h5> Mashing a lot of avocados at once? Use a potato masher or pastry cutter instead of a measly little fork.</h5>
+
+            <h4>  4) Don’t forget the salt</h4>
+               <h5> You’ll want to mix in at least a pinch of salt per avocado half. Bonus points? Finish your avocado toast with a light sprinkle of flaky sea salt.</h5>
+
+      </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> AVOCADO TOAST </h2>
+         <img src="{% static 'avocado-toast-with-red-pepper.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>Avocado Toast Bonus Tips</h2>
+               
+               <h4> Add garlic: Lightly rub a peeled raw garlic clove over the top of your toast before adding the avocado, or mix a tiny pinch of garlic powder into the avocado.</h4>
+               <h4> Add fresh leafy herbs or your favorite herbed sauce: Chopped fresh basil, cilantro, dill or parsley are all good with avocado. So is a drizzle of pesto, zhoug sauce (spicy cilantro sauce), or chimichurri.</h4>
+               <h4> Put an egg on it: I love to top my avocado toast with a fried egg for extra protein (example here). You can do a poached egg or scrambled egg if you prefer.</h4>
+               <h4> More extras: Quick-pickled onions or radishes or jalapeños, your favorite hot sauce, or a sprinkle of sliced cherry tomatoes.</h4>
+               </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> AVOCADO WITH EGGS</h2>
+         <img src="{% static 'Avocado-Toast-with-Egg-9.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>Ingredients</h2>
+               <h3> Ingredient Checklist</h3>
+               
+               <h4> ¼ avocado</h4>
+               
+               <h4> ¼ teaspoon ground pepper</h4>
+               
+               <h4> ⅛ teaspoon garlic powder</h4>
+               
+               <h4> 1 slice whole-wheat bread, toasted</h4>
+               
+               <h4> 1 large egg, fried</h4>
+               
+               <h4> 1 teaspoon Sriracha (Optional)</h4>
+               
+               <h4> 1 tablespoon scallion, sliced (Optional)</h4>
+            
+            
+               <h4> Step 1</h4>
+               <h5> Combine avocado, pepper and garlic powder in a small bowl and gently mash.</h5>
+               
+               <h4> ADVERTISEMENT</h4>
+               <h4> Step 2</h4>
+               <h5> Top toast with the avocado mixture and fried egg. Garnish with Sriracha and scallion, if desired.</h5>
+            
+            
+               <h4> Nutrition Facts</h4>
+               <h4> Serving Size: 1 toast</h4>
+            
+               <h4> Per
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> FATTY-FISH </h2>
+         <img src="{% static 'fatty fish.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>Ingredients</h2>
+
+               <h4> 1/3 cup sliced almonds, toasted</h4>
+               <h4> 1/4 cup chopped jarred roasted red peppers</h4>
+               <h4> 1/4 cup halved grape tomatoes, or cherry tomatoes</h4>
+               <h4> 1 small clove garlic</h4>
+               <h4> 1 tablespoon extra-virgin olive oil</h4>
+            <h4>  1 tablespoon sherry vinegar, or red-wine vinegar</h4>
+               <h4> 1 teaspoon paprika, preferably smoked</h4>
+               <h4> 3/4 teaspoon salt, divided</h4>
+               <h4> 1/2 teaspoon freshly ground pepper, divided</h4>
+               <h4> 1 1/4 pounds wild-caught salmon fillet, skinned and cut crosswise into 4 portions</h4>
+               <h4> 2 medium zucchini, or summer squash (or 1 of each), halved lengthwise</h4>
+               <h4> Canola or olive oil cooking spray</h4>
+               <h4> 1 tablespoon chopped fresh parsley, for garnish</h4>
+               <h2> Directions</h2>
+               
+               <h4> 01.  Preheat grill to medium.</h4>
+            <h4>  02.  Process almonds, peppers, tomatoes, garlic, oil, vinegar, paprika, 1/4 teaspoon salt and 1/4 teaspoon pepper in a food processor or blender until smooth; set aside.</h4>
+            <h4>  03.  Coat salmon and zucchini (and/or summer squash) on both sides with cooking spray, then sprinkle with the remaining 1/2 teaspoon salt and 1/4 teaspoon pepper. Grill, turning once, until the salmon is just cooked through and the squash is soft and browned, about 3 minutes per side.</h4>
+            <h4>  04.  Transfer the squash to a clean cutting board. When cool enough to handle, slice into 1/2-inch pieces. Toss in a bowl with half of the reserved sauce. Divide the squash among 4 plates along with a piece of salmon topped with some of the remaining sauce. Garnish with parsley, if desired.</h4>
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> MACKERAL-FISH</h2>
+         <img src="{% static 'mackeral-fish.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>Ingredients</h2>
+
+               <h4> 2 slices slightly stale whole-wheat or rye bread</h4>
+               <h4> 4 teaspoons extra-virgin olive oil, or canola oil, divided</h4>
+               <h4> 1/2 cup finely chopped shallot</h4>
+               <h4> 1/3 cup fresh lemon juice</h4>
+               <h4> 2 teaspoons butter</h4>
+               <h4> 1 tablespoon capers, rinsed</h4>
+               <h4> 2 pounds Pacific halibut, or other firm-fleshed fish cut into 8 pieces</h4>
+               <h4> 1/4 teaspoon salt</h4>
+               <h4> 1 x 16 ounce jar sliced pickled beets, drained and diced</h4>
+                              <h2>   Directions</h2>
+               
+            <h4>  01.  Preheat oven to 425 degrees F. Coat a 9-by-13-inch baking dish with cooking spray.</h4>
+            <h4>  02.  To make breadcrumbs, grate bread through the large holes of a box grater; place the crumbs in a small bowl and toss with 2 teaspoons oil.</h4>
+               <h4> 03.  Heat the remaining 2 teaspoons oil in a medium nonstick skillet over medium heat. Add shallot and cook, stirring, until softened, 2 to 3 minutes. Pour in lemon juice and bring to a boil, stirring gently; remove from the heat and add butter. Swirl the pan, letting the butter melt and slightly thicken the sauce. Stir in capers.</h4>
+            <h4>  04.  Sprinkle fish with salt and place in the prepared baking dish. Pour the pan sauce over the fish and sprinkle with the breadcrumbs.</h4>
+               <h4> 05.  Bake the fish until it is opaque in the center, 15 to 18 minutes. Serve each portion topped with about 3 tablespoons pickled beets.</h4>
+            </p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> TUNA-STEAKS</h2>
+         <img src="{% static 'tuna-steaks.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>Ingredients</h2>
+
+               <h4> 1 tablespoon thinly sliced shallot</h4>
+               <h4> 1 bay leaf</h4>
+               <h4> 1/2 cup white wine</h4>
+               <h4> 3 tablespoons reduced-fat sour cream</h4>
+               <h4> 2 teaspoons lemon juice</h4>
+               <h4> 2 teaspoons chopped fresh dill, divided</h4>
+               <h4> 1 teaspoon whole-grain mustard</h4>
+               <h4> 1/2 teaspoon salt, divided</h4>
+               <h4> 1/4 cup coarse dry breadcrumbs, preferably whole-wheat</h4>
+               <h4> 1/4 cup shelled pistachios</h4>
+               <h4> 4 x 4 ounce tuna steaks, 1-1 1/4 inches thick</h4>
+               <h4> 1 teaspoon extra-virgin olive oil</h4>
+               
+                   <h2> Directions</h2>
+                
+               <h5> 01.  Place shallot, bay leaf and wine in a small saucepan and bring to a boil.
+                     Reduce until the wine is almost evaporated, about 5 minutes. Remove from the heat,
+                     discard bay leaf and transfer to a small bowl. Add sour cream, lemon juice, 
+                     1 teaspoon dill, mustard and 1/4 teaspoon salt; stir to combine.</h5>
+              <h5>  02.  Put breadcrumbs, pistachios, the remaining 1 teaspoon dill and 1/4 teaspoon 
+                     salt in a blender or food processor. Process until finely ground.
+                     Transfer to a shallow bowl. Dredge both sides of the tuna in the pistachio 
+                     mixture.</h5>
+               <h5> 03.  Heat oil in a large nonstick skillet over medium heat. Add the tuna and cook
+                     until browned, adjusting the heat as necessary to prevent burning, 4 to 5 minutes
+                     per side for medium-rare. Serve with the lemon-dill sauce.</h5>
+           </p>
+           
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> OKRA </h2>
+         <img src="{% static 'okra.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>Ingredients</h2>
+               <h4> 18 fresh okra pods, sliced 1/3 inch thick</h4>
+
+               <h4> 1 tablespoon olive oil</h4>
+                
+               <h4> 2 teaspoons kosher salt, or to taste</h4>
+                
+               <h4> 2 teaspoons black pepper, or to taste</h4>
+            
+         <h2>   Directions</h2>
+                          <h3>  Step 1</h3>
+               <h5> Preheat an oven to 425 degrees F (220 degrees C).</h5>
+
+            <h3>  ADVERTISEMENT</h3>
+              <h3>  Step 2</h3>
+               <h5> Arrange the okra slices in one layer on a foil lined cookie sheet.</h5>
+               <h5> Drizzle with olive oil and sprinkle with salt and pepper.</h5>
+               <h5> Bake in the preheated oven for 10 to 15 minutes.</h5>
+            </p>
+            </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> BRINGAL</h2>
+         <img src="{% static 'bainagan.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <h2>Ingredients</h2>
+              <h4> 1 Brinjal (Baingan / Eggplant) , cut into 1 inch thick wedges</h4>
+              <h4> 5 Tomato , finely chopped</h4>
+               <h4> 1 Onion , finely chopped</h4>
+               <h4> 4 cloves Garlic , finely chopped</h4>
+               <h4> 1/2 teaspoon Turmeric powder (Haldi)</h4>
+               <h4> 1 teaspoon Garam masala powder</h4>
+               <h4> 1 teaspoon Coriander Powder (Dhania)</h4>
+               <h4> 1/2 teaspoon Red Chilli powder , to taste</h4>
+               <h4> Salt , to taste</h4>
+               <h4> 1 tablespoon Ghee , for cooking</h4>
+               <h4> 1 teaspoon Oil</h4>
+              
+            <h4> Coriander (Dhania) Leaves , small bunch, chopped</h4>
+              
+              
+              <h3> How to make Baingan Tamatar Sabzi - Brinjal/ Eggplant Masala Recipe</h3>
+              
+            <h3>01. To begin making the Baingan Tamatar Sabzi/ Baingan Masala Recipe, we will first cook the baingan (eggplant) separately. Add in the cut baingan wedges into the oil, sprinkle some salt and stir to combine the salt in.</h3>
+               
+             <h3> 02. Cover the pan and cook the baingan on low to medium heat until it is partially cooked. When the pan is covered, it develops steam that will help the baingan to cook without any water. </h3>
+               
+             <h3> 03. Once the baingan is partially cooked, uncover the pan and roast the baingan until it is fully cooked.</h3>
+               
+            <h3> 04. We open it at a stage when it is partially cooked, as we dont want the baingan to get mushy, you want it to remain firm, yet cooked. So it is important to cook it without the lid in the second half. Once you feel the baingan is cooked well, turn off the heat.</h3>
+               
+             <h3> 05. Transfer the baingan to a bowl and keep aside and we will make the masala for the baingan tamatar sabzi.</h3>
+               
+              <h3>06. Into the same pan we cooked the baingan, heat a teaspoon of ghee or oil; add in the onion and garlic and saute until the onions soften.</h3>
+             >
+             <h3> 07. Add in the chopped tomatoes and saute until the tomatoes become mushy and soft.</h3>
+               
+              <h3>08. Once the tomatoes soften, add the remaining masala ingredients like turmeric powder, coriander powder, garam masala powder, salt and red chilli powder to taste. </h3>
+               
+            <h3> 09. Stir all the baingan masala ingredients with the tomato and give it a brisk stir on high heat.</h3>
+               
+             <h3> 10. Add in the roasted eggplants and cover the pan, turn the heat to low and allow the baingan to simmer in the tomato masala for about 5 minutes. Check the salt and adjust to suit your taste.</h3>
+               
+             <h3> 11. After 5 minutes, turn off the heat and stir in the freshly chopped coriander leaves and transfer the Baingan Tamatar Sabzi/ Baingan Masala Recipe to a serving bowl. </h3>
+               
+             <h3> 12. Serve the Baingan Tamatar Sabzi/ Baingan Masala along with Phulka's and Carrot Salad for a quick weeknight dinner.</h3>
+            </p>
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> CAESER-SALAD</h2>
+         <img src="{% static 'classic-caeser-salad.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p>  <h4>6 Servings</h4>
+              <h4> THE DRESSING</h4>
+             <h4>  6  anchovy fillets packed in oil, drained</h4>
+             <h4>  1   small garlic clove</h4>
+              <h4> Kosher salt</h4>
+              <h4>  2 large egg yolks</h4>
+               <h4> 2 tablespoons fresh lemon juice, plus more</h4>
+              <h4>  ¾ teaspoon Dijon mustard</h4>
+              <h4> 2 tablespoons olive oil</h4>
+               <h4> ½ cup vegetable oil</h4>
+              <h4> 3 tablespoons finely grated Parmesan</h4>
+              <h4>Freshly ground black pepper</h4> 
+               
+              <h4> THE CROUTONS</h4>
+              <h4> 3 cups torn 1" pieces country bread, with crusts</h4>
+              <h4> 3 tablespoons olive oil</h4>
+               
+             <h4>  THE LETTUCE</h4>
+             <h4>  3 romaine hearts, leaves separated</h4>
+              
+             <h4>  THE CHEESE</h4>
+              <h5> Parmesan, for serving</h5>
+              
+              
+              <h4> Preparation</h4>
+               
+              <h4> THE DRESSING</h4>
+                <h4>   Step 1 :</h4>
+                  <h5> Chop together anchovy fillets, garlic, and pinch of salt. Use the side of a knife blade to mash into a paste, then scrape into a medium bowl. Whisk in egg yolks, 2 Tbsp. lemon juice, and mustard. Adding drop by drop to start, gradually whisk in olive oil, then vegetable oil; whisk until dressing is thick and glossy. Whisk in Parmesan. Season with salt, pepper, and more lemon juice, if desired.</h5>
+
+                  <h4> Step 2:</h4>
+                  <h5> DO AHEAD: Can be made 1 day ahead.</h5>
+
+                 <h4>  THE CROUTONS</h4>
+                  <h4>Step 3:</h4> 
+                 <h5>  Make your own. Tearing, not cutting the bread ensures nooks and crannies that catch the dressing and add texture. Preheat oven to 375°. Toss bread with olive oil on a baking sheet; season with salt and pepper. Bake, tossing occasionally, until golden, 10–15 minutes.</h5>
+
+                  <h4> THE LETTUCE</h4>
+                  <h4> Step 4: </h4>
+                  <h5> Use whole leaves; they provide the ideal mix of crispness, surface area, and structure.</h5>
+
+                  <h4> THE CHEESE</h4>
+                  <h4> Step 5:</h4>
+                  <h5> Caesars crowned with a mound of grated Parmesan may look impressive, but all that clumpy cheese mutes the dressing. Instead, use a vegetable peeler to thinly shave a modest amount on top for little salty bursts.</h5>
+
+                    <h4> THE ASSEMBLY</h4>
+                  <h4> Step 6:</h4>
+                  <h5> Skip the tongs. Use your hands to gently toss the lettuce, croutons, and dressing, then top off with the shaved Parm.</h5>
+                       
+
+                  <h5> Nutrition Per Serving</h5>
+                  <h5> 6 servings</h5>
+                  <h5> 1 serving contains: Calories (kcal) 380 ; Fat (g) 35 Saturated; Fat (g) 7 Cholesterol (mg); 80 Carbohydrates (g); 11 Dietary Fiber (g); 2 Total Sugars (g) ;3 Protein (g); 8 Sodium (mg) 450</h5>
+</p>
+
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> RICTOTTA </h2>
+         <img src="{% static 'ricotta.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p>
+
+             <h4>  Ingredients</h4>
+             <h4>  8 Servings</h4>
+               
+             <h4> 1 small red onion, thinly sliced into rings</h4>
+             <h4>   1 cup ricotta</h4>
+               <h4>   2 tablespoons olive oil</h4>
+               <h4>  1 teaspoon finely grated lemon zest</h4>
+                  <h4> 2 tablespoons fresh lemon juice</h4>
+                     <h4> Kosher salt, freshly ground pepper</h4>
+                        <h4> 8 small white turnips, peeled, cut into ½" wedges</h4>
+                           <h4> 3 heads small tender lettuce (such as Little Gem) or 1 head Bibb lettuce, leaves separated</h4>
+                              <h4> ½ head of cauliflower, cut into florets</h4>
+                                 <h4> 1 small fennel bulb, halved lengthwise, sliced into thin spears</h4>
+                                    <h4> 1 endive, halved lengthwise sliced into thin spears</h4>
+               
+               
+                                       <h4> Preparation</h4>
+               <h4> Step 1:</h4>
+               <h5> Heat broiler. Arrange onion in a single layer on a rimmed baking sheet. Broil, turning occasionally
+               , until blackened, about 5 minutes; let cool.<h5>
+               
+               <h4>  Step 2:</h4>
+               <h5> Pulverize charred onion to a powder in a spice mill or a mortar and pestle. 
+               (Or, seal in a plastic bag and crush with a rolling pin or skillet.)
+                Set onion powder aside.</h5>
+               
+                <h4> Step 3:</h4>
+                <h5>  Blitz ricotta, oil, lemon zest, and lemon juice in a food processor until smooth; 
+               season with salt and pepper. Transfer to a small bowl and smooth top. 
+               Use a fine-mesh sieve to dust onion powder over to cover (you won’t need all of it). 
+               Serve dip with crudité.</h5>
+               
+               <h4>  Step 4:</h4>
+               <h5>  Do ahead: Whipped ricotta can be made 2 days ahead; cover and chill.
+                Bring to room temperature before serving. Onion powder can be made 
+                1 month ahead; store airtight at room temperature.</h5>
+           </p>
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">LETTUCES & AVOCADO  </h2>
+         <img src="{% static 'grilled-lettuces-with-creme-fraiche-and-avocado.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p>
+
+               <h4> Ingredients</h4>
+              <h4> 4 Servings</h4>
+              
+               
+              <h4> 2 romaine lettuce hearts and/or large heads of Treviso radicchio, halved lengthwise</h4>
+              <h4> 3 tablespoons olive oil, divided, plus more</h4>
+              <h4> Kosher salt and freshly ground black pepper</h4>
+              <h4> 1 cup mizuna or baby mustard greens</h4>
+              <h4>  ½ cup crème fraîche</h4>
+               <h4>  1 avocado, cut into quarters</h4>
+                  <h4>  2 tablespoons fresh lemon juice</h4>
+                     <h4>  Flaky sea salt (such as Maldon)</h4>
+           
+                        <h4>  ** Preparation**</h4>
+                           <h4>   Step 1:</h4>
+              <h5> Prepare grill for medium-high heat. Brush cut sides of lettuce with a total of 2 Tbsp. oil; season with kosher salt and pepper. Grill lettuce, cut side down, until lightly charred, about 2 minutes.</h5>
+               
+               <h4> Step 2:</h4>
+             <h5>  Toss mizuna with 1 Tbsp. oil in a medium bowl; season with kosher salt.</h5>
+               
+               <h4> Step 3:</h4>
+              <h5> Dollop crème fraîche on a platter and top with grilled lettuce and avocado; scatter mizuna over. Drizzle with lemon juice and more oil; season with sea salt and pepper.</h5>
+
+
+</p>
+         </div>
+      </div>
+
+      <div class="recipe">
+         <h2 style="text-align: center;">MUSHEOOMS</h2>
+         <img src="{% static 'mushroom.webp'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p><h2> mushroom's</h2>
+               <h4>  200 to 250 grams button mushrooms</h4>
+                    <h4> 1. ¼ cup Curd (yogurt), fresh and full-fat or made with whole milk</h4>
+                    <h4> 2. 1 cup fenugreek leaves (methi leaves) or 1 to 2 tablespoons dry fenugreek leaves (kasuri methi)</h4>
+                    <h4> 3. 3 tablespoons oil or ghee</h4>
+                    <h4> 4. ½ cup chopped onions or 1 medium-sized onion</h4>
+                    <h4> 5. 1 or 2 green chili – sliced or chopped or 1 teaspoon chopped</h4>
+                    <h4> 6. ½ tablespoon Ginger-Garlic Paste</h4>
+                  <h4>   7. 3 tomatoes – medium-sized, chopped or 1.25 to 1.5 cups chopped tomatoes</h4>
+                    <h4> 8. ½ teaspoon turmeric powder</h4>
+                    <h4> 9. 1 teaspoon Coriander Powder (ground coriander)</h4>
+                    <h4> 10. ½ teaspoon red chili powder or cayenne pepper</h4>
+                    <h4> 11. salt as required</h4>
+                    <h4> 12. ¼ to ½ cup water or add as required</h4>
+                     
+                    <h2> Whole Spices</h2>
+                    <h4> 01. 2 to 3 green cardamoms</h4>
+                    <h4> 02. 1 inch cinnamon</h4>
+                   <h4>  03. 1 black cardamom</h4>
+                    <h4> 04. 1 tej patta (Indian bay leaf)</h4>
+                    <h4> 05. 2 to 3 cloves</h4>
+                    <h4> 06. 1 to 2 single strands of mace – optional</h4>
+                 
+         </div>
+      </div>
+
+
+      <div class="recipe">
+         <h2 style="text-align: center;"> CARROT CAKE </h2>
+         <img src="{% static 'image.jpg'%}" alt="not connected">
+         <div class="modal">
+            <span class="close">&times;</span>
+            <p> <H4>Ingredients</H4>
+            <h4>   Carrot Cake</h4>
+             <h4>  1 ½ cups all-purpose flour</h4>
+             <h4>  ⅔ cup flax-seed meal</h4>
+             <h4>  2 teaspoons baking powder</h4>
+             <h4>  1 teaspoon pumpkin pie spice</h4>
+             <h4>  ½ teaspoon baking soda</h4>
+             <h4>  ¼ teaspoon salt</h4>
+             <h4>  3 cups finely shredded carrot (about 6 medium carrots) (see Tip)</h4>
+             <h4>  1 cup refrigerated or frozen egg product, thawed, or 4 eggs, lightly beaten</h4>
+             <h4>  ½ cup granulated sugar (see Tip)</h4>
+             <h4>  ½ cup packed brown sugar (see Tip)</h4>
+             <h4>  ½ cup canola oil</h4>
+             <h4>  1 Coarsely shredded carrot</h4>
+             <h4>  Fluffy Cream Cheese Frosting</h4>
+             <h4>  2 ounces softed reduced-fat cream cheese (Neufchâtel)</h4>
+             <h4> ½ teaspoon vanilla</h4>
+               <h4> ¼ cup powdered sugar</h4>
+                  <h4>   1 ½ cups frozen light-whipped dessert topping</h4>
+               
+
+                     <h4> DirectionsInstructions Checklist</h4>
+                        <h4> Step 1:</h4>
+              <h5> Preheat oven to 350 degrees F. Grease and lightly flour two 8x1-1/2- or 9x1-1/2-inch round cake pans; line bottom of pans with waxed paper or parchment paper. Grease and lightly flour the waxed paper or parchment paper and the sides of the pans. Set aside.</h5>
+               
+               <h4> Step 2:</h4>
+            <h5> In a large bowl, stir together flour, flax seed meal, baking powder, pumpkin pie spice, baking soda and salt; set aside. In another large bowl, combine finely shredded carrot, eggs, granulated sugar, brown sugar and oil. Add egg mixture all at once to flour mixture. Stir until combined. Divide batter evenly among prepared pans, spreading evenly.</h5>
+               
+               <h4> Step 3:</h4>
+            <h5>   Bake for 25 to 30 minutes for 8-inch pans, 20 to 25 minutes for 9-inch pans, or until a toothpick inserted near centers of the cakes comes out clean. Cool cakes in pans on wire racks for 10 minutes. Invert cakes onto wire racks. Cool completely.</h5>
+               
+               <h4> Step 4:</h4>
+              <h5> In a medium bowl, beat reduced-fat cream cheese (Neufchâtel) with an electric mixer on medium to high speed until smooth. Beat in vanilla. Gradually add powdered sugar, beating until smooth. Thaw 1-1/2 cups frozen light whipped dessert topping. Fold about 1/2 cup of the topping into the cream cheese mixture to lighten. Fold in the remaining whipped topping.</h5>
+               
+               <h4> Step 5:</h4>
+              <h5> Place one cooled cake layer on a serving platter. Top with half of the Fluffy Cream Cheese Frosting. Place the second cake layer atop the frosting; spread with the remaining frosting. If desired, garnish </h5>
+            </p>
+         </div>
+      </div>
+   </div>
+   <br><br>
+   <br>
+
+   <div id="about" class="about" align="cente">
+      <br><br><br><br>
+      <div class="aboutss">
+       <h1 id="about">ABOUT</h1>
+       <marquee behavior="alternate" scrollamount="8" direction="right">BEWARE OF FRAUDS</marquee>
+          <table  align="center" cellspacing="15px">
+             <tr>
+                <td>BOWL RECIPE</td>
+                <td> SOYA RECIPE</td>
+                <td> MIX ATTA</td>
+                <td> OATSUPMA</td>
+             </tr>
+            
+             <tr>
+               <td> DALCHEELA</td>
+               <td> PLAIN RAJMA</td>
+               <td>KALA-CHANA  </td>
+               <td> BATHUA-SAAG</td>
+             </tr>
+
+             <tr>
+                <td> SOYA CHAAP</td>
+                <td> BASAN-CURRY </td>
+                <td> MACKERAL-FISH</td>
+                <td> BOIL CHOLA</td>
+             </tr>
+
+             <tr>
+                <td> PALAK-SAAG</td>
+                <td> PLAIN-PANEER</td>
+                <td> MIX-DAL</td>
+               <td> ChANA-DAL</td>
+             </tr>
+
+             <tr>
+               <td>Broccoli</td>
+               <td>DRY SAAG</td>
+               <td> DRY CHANA</td>
+               <td> MIX VEG</td>
+             </tr>
+
+             <tr>
+               <td> PANEER BHUJI</td>
+               <td>PANEER BASAN</td>
+               <td>  AVOCADO TOAST</td>
+               <td> ALOO PEA</td>
+
+             </tr>
+
+             <tr>
+               <td>VEG WITH DRY PANEER  </td>
+               <td> SHRIMPS </td>
+               <td>DRY TAWA PANEER</td>
+               <td>DRY BITTER GOURD</td>
+
+             </tr>
+
+             <tr>
+                <td>  BITTER GOURD</td>
+                <td>  BISCOTTI RECIPE</td>
+                <td> LEMON BRAISED</td>
+                <td> TAMOTA SALAD MIX</td>
+             </tr>
+
+             <tr>
+               <td> AVOCADO</td>
+               <td> PANEER BASAN </td>
+               <td>    AVOCADO WITH EGGS</td>
+               <td>FATTY-FISH </td>
+             </tr>
+
+             <tr>
+               <td> TUNA-STEAKS</td>
+               <td> OKRA</td>
+               <td>BRINGAL</td>
+               <td>CAESER-SALAD</td>
+             </tr>
+
+             <tr>
+               <td>RICTOTTA</td>
+               <td>LETTUCES & AVOCADO</td>
+               <td>MUSHEOOMS</td>
+               <td>CARROT CAKE</td>
+             </tr>
+          </table>
+           
+    </div>  
+   </div>
+   
+     
+
+
+   <script>
+         var slides=document.getElementsByClassName("img");
+       var i;
+       var ind=0;
+       var image=document.querySelectorAll(".recipes img");
+       console.log(image);
+       var data=document.querySelectorAll(".modal");
+       console.log(data);
+       var back=document.querySelectorAll("span");
+       console.log(back);
+       
+       function display()
+       {
+           ind=ind+1;
+           ind=ind%4;
+         for(i=0;i<4;i++) 
+            {
+                slides[i].style.display="none";
+            }
+            slides[ind].style.display="block";
+       }
+       setInterval(display,1000);
+       for(i=0;i<image.length;i++)
+       {
+          image[i].setAttribute("id","i"+i);
+          data[i].setAttribute("id","p"+i);
+          back[i].setAttribute("id","q"+i);
+          data[i].style.display="none";
+          image[i].addEventListener("click",(e)=> {
+            console.log(e.target.id)
+            tgtid=e.target.id;
+            tgtid=tgtid.replace("i","p");
+            console.log(tgtid);
+            document.getElementById(tgtid).style.display="block";
+          })
+         back[i].addEventListener("click",(e)=>{
+           for(j=0;j<data.length;j++)
+           {
+             data[j].style.display="none";
+           }
+         })
+          
+       }
+         
+        
+
+   </script>
+
+
+
+</body>

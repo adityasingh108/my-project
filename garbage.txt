@@ -1,0 +1,2 @@
+1st step :-  .\env\Scripts\activate 
+2nd step :-  python  .\manage.py runserver
