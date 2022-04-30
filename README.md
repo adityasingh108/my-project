@@ -2,4 +2,4 @@
 ![fodipedia](fodipedia.png) 
 
 
-[click here](https://sachin121.pythonanywhere.com/)
+[Click here to explore the amazing web app](https://sachin121.pythonanywhere.com/)
